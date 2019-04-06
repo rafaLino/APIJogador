@@ -1,0 +1,3 @@
+[submodule "0 - Presentation/JogadorApp"]
+	path = 0 - Presentation/JogadorApp
+	url = https://github.com/rafaLino/JogadorAPI.git

@@ -1,0 +1,20 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/1 - Application/Jogador.Application.Service/bin/Debug/netcoreapp2.1
+/1 - Application/Jogador.Application.Service/obj
+/2 - Domain/Jogador.Domain/bin/Debug/netcoreapp2.1
+/2 - Domain/Jogador.Domain/obj
+/2 - Domain/Jogador.Domain.Core/bin/Debug/netcoreapp2.1
+/2 - Domain/Jogador.Domain.Core/obj
+/3 - Infra/Jogador.Infra.Data/bin/Debug/netcoreapp2.1
+/3 - Infra/Jogador.Infra.Data/obj
+/3 - Infra/Jogador.Infra.IoC/bin/Debug/netcoreapp2.1
+/3 - Infra/Jogador.Infra.IoC/obj/Debug/netcoreapp2.1
+/3 - Infra/Jogador.Infra.IoC/obj/Release/netcoreapp2.1
+/3 - Infra/Jogador.Infra.IoC/obj
+/1 - Application/Jogador.Application.WebAPI/obj/Release/netcoreapp2.1
+/1 - Application/Jogador.Application.WebAPI/obj
+/1 - Application/Jogador.Application.WebAPI/bin/Debug/netcoreapp2.1
