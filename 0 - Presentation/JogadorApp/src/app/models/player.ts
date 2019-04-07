@@ -1,6 +1,9 @@
-export interface Player {
-    Id: string;
-    Name: string;
-    Age: Number;
-    Position: string;
+export class Player {
+    constructor(
+   public id?: string,
+   public name?: string,
+   public age?: Number,
+   public position?: string,
+   public imgPath?: string
+    ){}
 }

@@ -12,7 +12,7 @@
                             <table class="table">
                                 <thead class=" text-primary">
                                     <th>
-                                        #
+                                        &nbsp;
                                     </th>
                                     <th>
                                         Nome
@@ -23,15 +23,31 @@
                                     <th>
                                         Posição
                                     </th>
+                                    <th class="pl-5">
+                                        #
+                                        <button mat-raised-button type="button" style="float:right;">
+                                            <a routerLink="/user-profile">
+                                                <i class="material-icons">add</i>
+                                                Novo Jogador
+                                            </a>
+                                        </button>
+
+                                    </th>
                                 </thead>
                                 <tbody>
                                     <tr *ngFor='let player of players'>
-                                        <td>
-                                            &nbsp;
-                                        </td>
+                                        <td><img class="img" class="rounded-circle" width="52px" height="52px" [src]="ImgPath(player.imgPath)" (click)="file.click()" /></td>
                                         <td>{{player.name}}</td>
                                         <td>{{player.age}}</td>
                                         <td>{{player.position}}</td>
+                                        <td>
+                                            <button mat-button type="button" (click)="Edit(player.id)">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button mat-button type="button" (click)="Remove(player.id)">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

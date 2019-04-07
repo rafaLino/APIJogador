@@ -34,11 +34,15 @@ export class PlayerService {
     return this._http.post<Player>(this.baseUri, player);
   }
 
-  update(id: string, player: Player): Observable<any> {
-    return this._http.put(`${this.baseUri}/${id}`, player);
+  update(id: string, player: Player): Observable<Response> {
+    return this._http.put<Response>(`${this.baseUri}/${id}`, player);
   }
 
-  delete(id: string): Observable<any> {
-    return this._http.delete(`${this.baseUri}/${id}`);
+  delete(id: string): Observable<Response> {
+    return this._http.delete<Response>(`${this.baseUri}/${id}`);
+  }
+
+  uploadImage(file : FormData): Observable<Response> {
+    return this._http.post<Response>(`${this.baseUri}/Image`,file);
   }
 }

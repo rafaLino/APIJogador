@@ -39,8 +39,7 @@ import { PlayerService } from './services/player.service';
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
-
+    AdminLayoutComponent
   ],
   providers: [NotifyService, PlayerService],
   bootstrap: [AppComponent]

@@ -11,5 +11,7 @@ namespace Jogador.Application.Service.InputOutput.Player
         public int Age { get; set; }
         public string Position { get; set; }
 
+        public string ImgPath { get; set; }
+
     }
 }

@@ -3,10 +3,13 @@ using Jogador.Application.Service.Mappings;
 using Jogador.Infra.IoC.Register;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Swashbuckle.AspNetCore.Swagger;
+using System.IO;
 
 namespace Jogador.Application.WebAPI
 {
@@ -49,7 +52,12 @@ namespace Jogador.Application.WebAPI
             }
 
             app.UseHttpsRedirection();
-            
+            app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources")),
+                RequestPath = new PathString("/Resources")
+            });
 
             app.UseSwagger();
 

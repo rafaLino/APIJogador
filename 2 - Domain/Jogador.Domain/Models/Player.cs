@@ -14,6 +14,9 @@ namespace Jogador.Domain.Models
         [BsonElement("Position")]
         public string Position { get; private set; }
 
+        [BsonElement("ImgPath")]
+        public string ImgPath { get; set; }
+
         public Player()
         {
 
