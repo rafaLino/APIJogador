@@ -25,26 +25,32 @@
                                     </th>
                                     <th class="pl-5">
                                         #
-                                        <button mat-raised-button type="button" style="float:right;">
-                                            <a routerLink="/user-profile">
+                                        <a routerLink="/user-profile">
+                                            <button mat-raised-button type="button" style="float:right;">
                                                 <i class="material-icons">add</i>
                                                 Novo Jogador
-                                            </a>
-                                        </button>
+
+                                            </button>
+                                        </a>
 
                                     </th>
                                 </thead>
                                 <tbody>
                                     <tr *ngFor='let player of players'>
-                                        <td><img class="img" class="rounded-circle" width="52px" height="52px" [src]="ImgPath(player.imgPath)" (click)="file.click()" /></td>
+                                        <td><img class="img" class="rounded-circle" width="52px" height="52px"
+                                                [src]="ImgPath(player.imgPath)" /></td>
                                         <td>{{player.name}}</td>
                                         <td>{{player.age}}</td>
                                         <td>{{player.position}}</td>
-                                        <td>
-                                            <button mat-button type="button" (click)="Edit(player.id)">
+                                        <td class="td-actions">
+                                            <button mat-raised-button type="button" (click)="Edit(player.id)"
+                                                matTooltip="Editar Jogador" [matTooltipPosition]="'above'"
+                                                class="btn btn-primary btn-link btn-sm btn-just-icon">
                                                 <i class="material-icons">edit</i>
                                             </button>
-                                            <button mat-button type="button" (click)="Remove(player.id)">
+                                            <button mat-raised-button type="button" (click)="Remove(player.id)"
+                                                matTooltip="Remover Jogador" [matTooltipPosition]="'above'"
+                                                class="btn btn-danger btn-link btn-sm btn-just-icon">
                                                 <i class="material-icons">delete</i>
                                             </button>
                                         </td>
