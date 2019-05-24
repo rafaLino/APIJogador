@@ -34,13 +34,21 @@ export class UserProfileComponent implements OnInit {
     }
   }
 
-  getPlayer(id: string) {
-    this.service.get(id)
-      .subscribe((result: Player) => {
-        this.player = result;
-      }, (error: Error) => {
-        this.notify.danger(`Algo errado aconteceu: ${error.message}`);
-      })
+  // getPlayer(id: string) {
+  //   this.service.get(id)
+  //     .subscribe((result: Player) => {
+  //       this.player = result;
+  //     }, (error: Error) => {
+  //       this.notify.danger(`Algo errado aconteceu: ${error.message}`);
+  //     })
+  // }
+
+  async getPlayer(id: string) {
+    try {
+      this.player = await this.service.get(id);
+    } catch (error) {
+      this.notify.danger(`Algo errado aconteceu: ${(<Error>error).message}`);
+    }
   }
 
   onSubmit(player: Player) {
